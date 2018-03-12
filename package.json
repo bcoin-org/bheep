@@ -1,0 +1,44 @@
+{
+  "name": "bheep",
+  "version": "0.0.0",
+  "description": "Binary heap for javascript",
+  "keywords": [
+    "binary",
+    "heap"
+  ],
+  "license": "MIT",
+  "repository": "git://github.com/bcoin-org/bheep.git",
+  "homepage": "https://github.com/bcoin-org/bheep",
+  "bugs": {
+    "url": "https://github.com/bcoin-org/bheep/issues"
+  },
+  "author": "Christopher Jeffrey <chjjeffrey@gmail.com>",
+  "main": "./lib/bheep.js",
+  "scripts": {
+    "browserify": "browserify -s bheep lib/bheep.js | uglifyjs -c > bheep.js",
+    "clean": "rm -f bheep.js",
+    "lint": "eslint lib/ test/ || exit 0",
+    "test": "mocha --reporter spec test/*-test.js",
+    "webpack": "webpack --config webpack.config.js"
+  },
+  "devDependencies": {
+    "babelify": "^8.0.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "browserify": "^14.5.0",
+    "eslint": "^4.14.0",
+    "mocha": "^4.0.1",
+    "uglifyjs-webpack-plugin": "^1.1.5",
+    "uglify-es": "^3.1.3",
+    "webpack": "^3.10.0"
+  },
+  "engines": {
+    "node": ">=7.6.0"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  }
+}
