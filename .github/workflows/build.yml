@@ -15,11 +15,17 @@ jobs:
       with:
         node-version: 18.x
 
+    - name: Install tools
+      run: npm install --location=global bslint typescript
+
     - name: Install dependencies
-      run: npm install --location=global bslint
+      run: npm install
 
     - name: Lint
       run: npm run lint
+
+    - name: Lint types
+      run: npm run lint-types
 
   test:
     name: Test
