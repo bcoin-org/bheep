@@ -1,6 +1,6 @@
 {
   "name": "bheep",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Binary heap for javascript",
   "keywords": [
     "binary",
